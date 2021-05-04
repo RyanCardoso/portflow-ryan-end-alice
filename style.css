@@ -85,7 +85,7 @@ header{
     color: #000000;
 }
 @media screen and (max-width: 800px){
-    .menu{display: none;}
+    .box-menu_header{display: none;}
 }
 
 /*-------------------------
@@ -172,3 +172,117 @@ footer{
 }
 .copyright-title{font-size: 1vw; padding-right: 1.5vw;}
 .copyright-paragraph{font-size: .8vw; width: 28.75vw;}
+
+
+@media screen and (max-width: 800px){
+    .responsive{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 35%;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.65); 
+        transition: 1.7s all linear;
+    }
+
+    #check:checked~ .responsive{
+    }
+    /* .btnClose{
+        width: 8vw;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 50%;
+        font-size: 5vw;
+        font-family: 'Montserrat', sans-serif;
+    } */
+    .btnCheck{display: none}
+    .btnCheck:checked~label .box-btnClose{
+        width: 8vw;
+        height: 8vw;
+        border-radius: 50%;
+        position: fixed;
+        top: 2vw;
+        left: 24vw;
+        background-color: black;
+        z-index: 2;
+        transition: .s;
+    }
+    .btnCheck:checked~label .btnClose{
+        transform: rotate(45deg);
+    }
+    .btnCheck:checked~label .btnClose::before{
+        transform: rotate(90deg);
+        top: 0;
+    }
+    .btnCheck:checked~label .btnClose::after{
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    .box-btnClose{
+        width: 28vw;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0vw;
+        left: 0vw;
+        background-color: black;
+        z-index: 2;
+        transition: .1s;
+    }
+    .btnClose{
+        position: relative;
+        display: block;
+        background-color: white;
+        width: 5vw;
+        height: 0.3vw;
+        transition: .5s ease-in-out;
+    }
+    .btnClose::before, .btnClose::after{
+        display: block;
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease-in-out;
+    }
+    .btnClose::before{top: 1vw;}
+    .btnClose::after{bottom: 1vw;}
+
+    .menu{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu li{height: auto;}
+    
+    .menu li a{
+        font-size: 4.5vw;
+        color: white;
+        padding-left: 2vw;
+    }
+
+    .menu li a:hover{
+        font-size: 4.5vw;
+        color: white;
+    }
+    
+    .menu li:hover{
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+    }
+}

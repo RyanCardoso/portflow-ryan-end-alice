@@ -11,20 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d1fd21ad22.js" crossorigin="anonymous"></script>
-    
+    <script src="main.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="box-hamburguer">
-            <i class="fa fa-bars"></i>
-        </div>
+        <input class="btnCheck" type="checkbox" id="check">
+        <label for="check" onclick="openMenu();">
+            <div class="box-btnClose">
+                <span class="btnClose"></span>
+            </div>
+        </label>
+
         <div class="container">
             <section class="box-header">
                 <div class="box-logo_header">
                     <a class="logo" href="#">Potflow</a>
                 </div>
-                <nav class="box-menu_header">
+                <nav class="box-menu_header" id="myMenu">
+
+
                     <ul class="menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Blog</a></li>
