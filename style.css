@@ -212,4 +212,39 @@ footer{
         transform: scale(0);
         transition: none;
     }
+    footer{
+        margin: auto;
+        width: 80%;
+        display: flex;
+        padding-top: 3vw;
+    }    
+    .box-footer{
+        flex-direction: column;
+        padding-top: 3vw;
+    }
+    .menu-social{
+        width: 100%;
+        justify-content: space-evenly;
+        background-color:#7FDBD4;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+    .icons-social i{
+        font-size: 6vw;
+    }
+
+    .box-copyright-txt{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .copyright-title{
+        font-size: 3vw;
+        padding-top: 3vw;
+    }
+    .copyright-paragraph{
+        font-size: 2.5vw;
+        width: 60%;
+        padding-bottom: 3vw;
+    }
 }
