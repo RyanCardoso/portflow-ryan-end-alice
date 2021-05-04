@@ -6,7 +6,6 @@ function openMenu(){
     if(menu.className == "box-menu_header")
         {
             menu.className = "responsive";
-            menu.style.height = "70vh"
         }
     else{
         menu.className = "box-menu_header";
