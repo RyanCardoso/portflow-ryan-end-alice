@@ -97,6 +97,7 @@ main{
     background-image: url(img/laranja\ azul\ recorte.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-X: 80%;
     display: flex;
     flex-direction: column;
 }
@@ -122,7 +123,6 @@ main{
     text-decoration: none;
 }
 
-
 .box-gallery{
     width: 100%;
     padding-top: 4vw;
@@ -136,9 +136,12 @@ main{
 
 .gallery img{
     width: 100%;
+    height: 100%;
 }
-
-
+.gallery img:hover{
+    transform: scale(1.4);
+    transition: .5s ease;
+}
 
 footer{
     width: 100%;
@@ -153,18 +156,15 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
-
 .menu-social{
     width: 20%;
     display: flex;
     justify-content: space-between;
 }
-
 .icons-social i{
     color: black;
     font-size: 1.8vw;
 }
-
 .box-copyright-txt{
     width: 67%;
     display: flex;
@@ -172,3 +172,44 @@ footer{
 }
 .copyright-title{font-size: 1vw; padding-right: 1.5vw;}
 .copyright-paragraph{font-size: .8vw; width: 28.75vw;}
+
+@media screen and (max-width:1030px){
+    .box-main-txt{
+        height: 80vh;
+        justify-content: center;
+        padding-bottom: 2vw;
+    }
+    .main-title{
+        width: 80%;
+        font-size: 8vw;
+    }
+    .main-paragraph{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    main{
+        background-position-X: 82%;
+    }
+    .box-main-txt{
+        height: 80vh;
+        justify-content: flex-end;
+        padding-bottom: 2vw;
+    }
+    .main-title{
+        font-size: 12vw;
+    }
+    .main-paragraph{
+        font-size: 4vw;
+        padding-bottom: 3vw;
+    }
+    .gallery{
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+    .gallery img:hover{
+        transform: scale(0);
+        transition: none;
+    }
+}
